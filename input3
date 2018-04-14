@@ -1,0 +1,35 @@
+#################################### INPUT 3 #######################################
+# This is the sample input provided by the assignment and tests
+# the following scenarios. I have added a few extra things.
+#################################### DECLARING THINGS ##############################
+Cinema 1 A 15
+Cinema 1 B 20
+Cinema 2 B 5
+Cinema 2 X 5
+Session 1 09:00 Toy Story
+Session 1 14:30 Ratatouille
+Session 2 09:00 Up
+Request 1 1 09:00 10
+############ TEST I THERE ARE NOT SUFFICIENT SEATS IN THE FIRST ROW, ###############
+############ SEATS WILL BE ALLOCATED FROM THE SECOND ROW ###########################
+Request 2 1 09:00 12
+############ TEST THAT BOOKINGS ARE REJECTED IF THERE ARE NO AVAILABLE SEATS #######
+Request 3 1 09:00 10
+Request 4 1 14:30 10
+############ TEST THAT MULTIPLE BOOKINGS CAN SHARE A ROW ###########################
+Request 5 1 14:30 4
+Request 6 2 09:00 3
+Print 1 14:30
+Print 1 09:00
+Print 2 09:00
+#################################### PRINT BEFORE CHANGE ###########################
+Change 1 1 14:30 7
+Print 1 14:30
+Print 1 09:00
+Print 2 09:00
+#################################### PRINT BEFORE CANCEL ###########################
+Cancel 6
+Print 1 14:30
+Print 1 09:00
+Print 2 09:00
+#################################### END OF TESTS ##################################
